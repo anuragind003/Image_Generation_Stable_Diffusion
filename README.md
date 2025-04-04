@@ -14,33 +14,32 @@ This project provides a pipeline to fine-tune Stable Diffusion (specifically SDX
 
 ## Project Structure
 
-.
-├── db_lora_sdxl_project/ 
-│ ├── instance_images/ # Your style training images (local/Drive)
-│ ├── class_images/ # Optional regularization images (local/Drive)
-│ └── output_lora/ # Trained LoRA model output (local/Drive)
+├── db_lora_sdxl_project/       # Main project directory
+│   ├── instance_images/        # Style training images (local/Drive)
+│   ├── class_images/           # Optional regularization images (local/Drive)
+│   ├── output_lora/            # Trained LoRA model output (local/Drive)
 │
-├── thumbnail_pipeline/ # Thumbnail Generation Code
-│ ├── config.py # Config for generation (API keys, paths, LoRA details)
-│ ├── llm_handler.py # Gemini API interactions
-│ ├── image_generator.py # Stable Diffusion image generation logic
-│ ├── text_overlay.py # Text rendering logic
-│ ├── main_pipeline.py # Main script to run generation
-│ ├── fonts/ # <<< IMPORTANT: Place required .ttf/.otf font files here >>>
-│ │ └── DejaVuSans-Bold.ttf # Example font
-│ └── requirements.txt # Python dependencies for the generation pipeline (will be merged)
+│   ├── thumbnail_pipeline/     # Thumbnail Generation Code
+│   │   ├── config.py           # Configuration file for generation (API keys, paths, LoRA details)
+│   │   ├── llm_handler.py      # Gemini API interactions
+│   │   ├── image_generator.py  # Stable Diffusion image generation logic
+│   │   ├── text_overlay.py     # Text rendering logic
+│   │   ├── main_pipeline.py    # Main script to run the thumbnail generation
+│   │   ├── fonts/              # Font files directory (Required .ttf/.otf files)
+│   │   │   └── DejaVuSans-Bold.ttf  # Example font
+│   │   └── requirements.txt    # Dependencies for the thumbnail generation pipeline
 │
-├── lora_training/ # LoRA Training Code
-│ ├── config_trainer.py # Config for training (paths, hyperparameters)
-│ ├── setup_handler.py # Installs, clones diffusers repo
-│ ├── train_runner.py # Builds and runs the training command
-│ └── main_train_lora.py # Main script to run training
+│   ├── lora_training/          # LoRA Model Training Code
+│   │   ├── config_trainer.py   # Configuration file for training (paths, hyperparameters)
+│   │   ├── setup_handler.py    # Installs required dependencies and clones the diffusers repository
+│   │   ├── train_runner.py     # Builds and runs the training command
+│   │   └── main_train_lora.py  # Main script to execute LoRA training
 │
-├── .env # Optional: For storing API Keys securely (add to .gitignore!)
-├── .gitignore # Specifies intentionally untracked files by Git
-├── LICENSE # Project license (e.g., MIT)
-├── README.md # This file
-└── requirements.txt # Combined Python dependencies for the whole project
+│   ├── .env                    # Optional: Stores API keys securely (add to .gitignore!)
+│   ├── .gitignore              # Specifies intentionally untracked files by Git
+│   ├── LICENSE                 # Project license (e.g., MIT)
+│   ├── README.md               # This file (project documentation)
+│   └── requirements.txt        # Combined Python dependencies for the entire project
 
 ## Setup
 
