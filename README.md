@@ -12,8 +12,10 @@ This project provides a pipeline to fine-tune Stable Diffusion (specifically SDX
 *   **Automated Text Overlay:** Renders the provided title onto the generated images using Pillow, applying AI-suggested styles and template-based placement.
 *   **Modular Structure:** Code is organized into separate modules for training and generation pipelines.
 
+```markdown
 ## Project Structure
 
+```text
 ├── db_lora_sdxl_project/       # Main project directory
 │   ├── instance_images/        # Style training images (local/Drive)
 │   ├── class_images/           # Optional regularization images (local/Drive)
