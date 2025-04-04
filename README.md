@@ -42,7 +42,7 @@ This project provides a pipeline to fine-tune Stable Diffusion (specifically SDX
 │   ├── LICENSE                 # Project license (e.g., MIT)
 │   ├── README.md               # This file (project documentation)
 │   └── requirements.txt        # Combined Python dependencies for the entire project
-
+```
 ## Setup
 
 **Prerequisites:**
