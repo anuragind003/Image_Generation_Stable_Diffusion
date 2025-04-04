@@ -16,32 +16,33 @@ This project provides a pipeline to fine-tune Stable Diffusion (specifically SDX
 ## Project Structure
 
 ```text
-├── db_lora_sdxl_project/       # Main project directory
-│   ├── instance_images/        # Style training images (local/Drive)
-│   ├── class_images/           # Optional regularization images (local/Drive)
-│   ├── output_lora/            # Trained LoRA model output (local/Drive)
+<your_main_project_folder>/    # Implicit top-level project folder
+├── db_lora_sdxl_project/      # Data, input images, and trained LoRA model storage
+│   ├── instance_images/       # Style training images (local/Drive)
+│   ├── class_images/          # Optional regularization images (local/Drive)
+│   └── output_lora/           # Trained LoRA model output (local/Drive)
 │
-│   ├── thumbnail_pipeline/     # Thumbnail Generation Code
-│   │   ├── config.py           # Configuration file for generation (API keys, paths, LoRA details)
-│   │   ├── llm_handler.py      # Gemini API interactions
-│   │   ├── image_generator.py  # Stable Diffusion image generation logic
-│   │   ├── text_overlay.py     # Text rendering logic
-│   │   ├── main_pipeline.py    # Main script to run the thumbnail generation
-│   │   ├── fonts/              # Font files directory (Required .ttf/.otf files)
-│   │   │   └── DejaVuSans-Bold.ttf  # Example font
-│   │   └── requirements.txt    # Dependencies for the thumbnail generation pipeline
+├── thumbnail_pipeline/        # Thumbnail Generation Application Code
+│   ├── config.py              # Configuration for generation (API keys, paths, LoRA details)
+│   ├── llm_handler.py         # Gemini API interactions
+│   ├── image_generator.py     # Stable Diffusion image generation logic
+│   ├── text_overlay.py        # Text rendering logic
+│   ├── main_pipeline.py       # Main script to run the thumbnail generation
+│   ├── fonts/                 # Font files directory (Required .ttf/.otf files)
+│   │   └── DejaVuSans-Bold.ttf # Example font
+│   └── requirements.txt       # Dependencies specific to the thumbnail generation pipeline
 │
-│   ├── lora_training/          # LoRA Model Training Code
-│   │   ├── config_trainer.py   # Configuration file for training (paths, hyperparameters)
-│   │   ├── setup_handler.py    # Installs required dependencies and clones the diffusers repository
-│   │   ├── train_runner.py     # Builds and runs the training command
-│   │   └── main_train_lora.py  # Main script to execute LoRA training
+├── lora_training/             # LoRA Model Training Code
+│   ├── config_trainer.py      # Configuration for training (paths, hyperparameters)
+│   ├── setup_handler.py       # Installs required dependencies and clones diffusers repository
+│   ├── train_runner.py        # Builds and runs the training command
+│   └── main_train_lora.py     # Main script to execute LoRA training
 │
-│   ├── .env                    # Optional: Stores API keys securely (add to .gitignore!)
-│   ├── .gitignore              # Specifies intentionally untracked files by Git
-│   ├── LICENSE                 # Project license (e.g., MIT)
-│   ├── README.md               # This file (project documentation)
-│   └── requirements.txt        # Combined Python dependencies for the entire project
+├── .env                       # Optional: Stores API keys securely (add to .gitignore!)
+├── .gitignore                 # Specifies intentionally untracked files by Git
+├── LICENSE                    # Project license (e.g., MIT)
+├── README.md                  # This file (project documentation for the whole setup)
+└── requirements.txt           # Combined/Overall Python dependencies for the projec
 ```
 ## Setup
 
