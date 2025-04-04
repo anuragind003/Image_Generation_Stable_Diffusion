@@ -15,7 +15,7 @@ This project provides a pipeline to fine-tune Stable Diffusion (specifically SDX
 ```markdown
 ## Project Structure
 
-```text
+
 <your_main_project_folder>/    # Implicit top-level project folder
 ├── db_lora_sdxl_project/      # Data, input images, and trained LoRA model storage
 │   ├── instance_images/       # Style training images (local/Drive)
@@ -42,7 +42,7 @@ This project provides a pipeline to fine-tune Stable Diffusion (specifically SDX
 ├── .gitignore                 # Specifies intentionally untracked files by Git
 ├── LICENSE                    # Project license (e.g., MIT)
 ├── README.md                  # This file (project documentation for the whole setup)
-└── requirements.txt           # Combined/Overall Python dependencies for the projec
+└── requirements.txt           # Combined/Overall Python dependencies for the project
 ```
 ## Setup
 
