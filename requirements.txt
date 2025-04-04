@@ -1,0 +1,24 @@
+# Core ML/DL Libraries (Install PyTorch matching CUDA separately first!)
+# torch>=2.0.0
+# torchvision>=0.15.0
+# torchaudio>=2.0.0
+accelerate>=0.25.0
+transformers>=4.35.0
+diffusers>=0.26.0 # Ensure compatibility with SDXL scripts
+safetensors>=0.4.0
+
+# LoRA Training Specific (can be needed for diffusers even if only generating)
+bitsandbytes>=0.41.0 # For 8-bit optimizer
+# xformers # Optional: for memory efficient attention (install manually if needed)
+
+# Generation Pipeline Specific
+google-generativeai>=0.4.0
+Pillow>=9.0.0
+python-dotenv>=0.21.0 # For handling .env files
+
+# Utilities often used in training/scripts
+tqdm>=4.60.0
+ftfy>=6.0 # Text cleaning, often a diffusers dependency
+gradio # Potentially a diffusers dependency, even if not used directly
+
+# Add any other specific libraries you installed manually
